@@ -1,3 +1,7 @@
+body {
+  margin: 0;
+}
+
 ul {
   list-style-position: outside;
   text-align: left;
@@ -43,19 +47,18 @@ img {
   font-size: x-large;
 }
 
-/* Uncomment below if images are way too big.
-Selects all image tags and makes them 500px;
- */
-/*img {*/
-/*  width: 500px;*/
-/*}*/
-
-@media only screen and (max-width: 768px) {
-  img {
+@media screen and (max-width: 768px) {
+  .two-col {
     max-width: 100%;
+    min-width: 90%;
+    padding: 0;
   }
 
-  .two-col {
-    width: auto;
+  .content {
+    padding: 0;
+  }
+
+  #main-content {
+    padding: 0 1rem;
   }
 }
