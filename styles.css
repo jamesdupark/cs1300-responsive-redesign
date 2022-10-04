@@ -1,0 +1,61 @@
+ul {
+  list-style-position: outside;
+  text-align: left;
+}
+
+ol {
+  list-style-position: outside;
+  text-align: left;
+}
+
+img {
+  max-width: 90%;
+}
+
+.two-col {
+  max-width: 45%;
+  padding: 0 1rem;
+  text-align: left;
+}
+
+.content {
+  display: flex;
+  padding: 0 2rem 0 2rem;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#main-content {
+  background-color: lightgreen;
+  font-family: nyt-cheltenham, georgia, 'times new roman', times, serif;
+  text-align: center;
+  overflow-wrap: break-word;
+  flex-direction: column;
+}
+
+#interview {
+  align-items: baseline;
+  justify-content: space-around;
+}
+
+#questions-list {
+  font-size: x-large;
+}
+
+/* Uncomment below if images are way too big.
+Selects all image tags and makes them 500px;
+ */
+/*img {*/
+/*  width: 500px;*/
+/*}*/
+
+@media only screen and (max-width: 768px) {
+  img {
+    max-width: 100%;
+  }
+
+  .two-col {
+    width: auto;
+  }
+}
