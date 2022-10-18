@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+h1, h2, h3, h4, h5, h6 {
+    /* color: #0a3255 !important; */
+    font-family: Lora, serif;
+}
+
+p, li {
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    padding-top: 4.25rem;
+}
+
+.navbar-brand img {
+    max-width: 80%;
+    height: auto;
+}
+
+.navbar-brand {
+    max-width: 70%;
+}

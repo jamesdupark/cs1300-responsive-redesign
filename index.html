@@ -1,169 +1,237 @@
 <!DOCTYPE html>
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <html lang="en">
-  <head>
-    <title>CS1300 Project 1: Personas and Storyboarding</title>
-    <link rel="stylesheet" href="styles.css" /> 
-  </head>
-  <body>
-    <div id="main-content" class="content">
-      <div id="intro">
-        <h1>CS1300 Project 1: Personas and Storyboarding</h1>
-        <!-- TODO: add description and annotated sketch -->
-        <p>
-          This project explores an interface in public view through user observations
-          and interviews, then converts user data into a simple set of personas and
-          a storyboard.
-        </p>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Project 2: Responsive Redesign</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #651868">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">
+          sleepysloth444
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item d-flex align-items-center">
+              <a class="nav-link active" aria-current="page" href="#intro">Introduction</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#part-1">Part 1: Identifying Usability Problems</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#part-2">Part 2: Visual Redesign</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#part-3">Part 3: Responsive Redesign</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav justify-content-end">
+            <li class="nav-item">
+              <a class="btn btn-outline-light m-1" role="button" href="https://minuteman.go2cte.com/go/default.aspx?Code=OH2022">Original Website</a>
+            </li>
+            <li class="nav-item">
+              <a class="btn m-1" role="button" href="redesign.html" style="background-color:#82bed6">Redesigned Website</a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div id="interface-sketch">
-      <h2>My Interface: Utensil dispenser</h2>
-      <p>
-        The interface I chose to examine was a utensil dispenser located at the
-        ERC.
+    </nav>
+  </header>
+  <main role="main" class="container">
+    <div class="row">
+      <h1 class="display-1">Project 2: Responsive Redesign</h1>
+      <hr/>
+    </div>
+    <div class="row" id="intro">
+      <h1 class="col-md-6 col-sm-auto display-3 d-flex align-items-center">Introduction</h1>
+      <p class="col lead">
+        For this project, I found a website that was poorly designed and created a responsively redesigned
+        website to address some of the problems I identified using Bootstrap's CSS components library. I also
+        practiced low-fi prototyping with Balsamiq and hi-fi prototyping with Figma.
       </p>
-      <img src="./assets/interface-sketch.jpg" alt="sketch of a utensil dispenser">
-      </div>
-      <div id="obs">
-        <h2>User Observations</h2>
+      <hr/>
+    </div>
+    <div class="row" id="part-1">
+      <h1 class="display-3">Part 1: Identifying Usability Problems</h1>
+      <div class="container">
         <p>
-          After observing users interact with the utensil dispenser, I noticed 
-          these overarching themes:
+            I chose to redesign a registration page for an event at a local magnet school. I chose this site because I think it is very
+            text-dense and difficult to know what to do or how to proceed with registering (even though this would presumably be the
+            main task for anyone arriving at this page).
         </p>
-        <ul>
-          <li>
-            In terms of <b>which utensils</b> are taken, forks are the most
-            popular by a large margin, followed by knives and then spoons.
-          </li>
-          <li>
-            In terms of <b>quantity of utensils</b>, most users took only one item
-            of a given type, and one at a time. Some users did take multiple
-            utensils, but usually of different types (i.e. a fork and a knife
-            rather than two forks).
-          </li>
-          <li>
-            In terms of the <b>timing of interactions</b>, most interactions with
-            the interface did not last more than a second (simply pulling out the
-            desired utensil and leaving.) Interactions that lasted longer than
-            that were usually due to taking multiple utensils, since there is a
-            delay when taking more than one utensil. This delay is especially
-            notable when taking multiple of the same utensil, since the next
-            utensil has to fall down before it can be taken. Thus, the area around
-            the interface remained relatively clear even though there was high
-            traffic flow.
-          </li>
-          <li>
-            In terms of <b>how users interacted with the interface</b>, most 
-            people used one hand to operate it, since many were holding other 
-            things in their other hand (i.e. ERC muffins and other pastries). The
-            notable exception was when people would take multiple utensils, 
-            occasionally both hands would be used.
-          </li>
-        </ul>
+        <div class="row d-flex justify-content-center">
+          <img src="assets/original-website.png" class="col" alt="screenshot showing an event registration page"/>
+          <a class="btn m-3 col-auto" role="button" href="redesign.html" style="background-color:#651868; color:white" href="https://minuteman.go2cte.com/go/default.aspx?Code=OH2022">Original Website</a>
+        </div>
+        <h3>Usability</h3>
+        <p class="lead">
+          Looking at the website, I first tried to find usability problems with the interface. Although not being
+          visually pleasing doesn't always translate into usability problems, this website suffers from both a lack
+          of aesthetics and usability problems.
+        </p>
+        <p>I identified the following usability problems with the interface:</p>
+        <div class="col">
+          <ul class="">
+            <li>
+              Text sizing is arbitrary, with important information such as headings not being significantly
+              bigger than other text.
+            </li>
+            <li>
+              A table is used to lay out information, which is unnecessary, visually confusing, and ugly.
+              The table also does not resize responsively.
+            </li>
+            <li>
+              The home button takes you to the homepage, while the logo button (which by convention
+              also takes you home) justs navigates to the same page.
+            </li>
+            <li>
+              The word "register" and its forms is used to refer both to registration for this specific
+              event and registration for an account on the webiste.
+            </li>
+            <li>
+              Information about the event is given redundantly.
+            </li>
+            <li>
+              Users are not told whether they are logged in or not, an are instead asked to recall whether
+              or not they have previously made an account. However, information pertaining to event registration
+              (which cannot proceed unless logged in) is present before users even log in.
+            </li>
+            <li>
+              Irrelevant information (random numbers) appears in the middle of the page, with no indication
+              what the numbers indicate or whether or not they are important.
+            </li>
+            <li>
+              If selecting "Yes" or "No" to indicate that an account has been made already, no option is given
+              to go back if the wrong selection is made.
+            </li>
+            <li>
+              There are four links to various social media sites under the "Connect with us" in the footer, yet
+              none of them render since there is no link content.
+            </li>
+          </ul>
+        </div>
+        <h3>Accessibility</h3>
+        <p>
+          I then used the <a class="text-reset" href="https://wave.webaim.org/report#/https://minuteman.go2cte.com/go/default.aspx?Code=OH2022">
+            WAVE accessibility tool</a> to look at the accessibility of the website. Most of the findings in the report were in line with what
+            I had found to be usability issues (i.e. empty links, table layout), which demonstrates that accessibiliity and good design often go
+            hand-in-hand. Many of the other issues, such as mising page regions, alt text, or underlined text, could have been fixed by following
+            more proper HTML conventions.
+        </p>
       </div>
-      <div id="interview" class="content">
-        <div id="interview-questions" class="two-col">
-          <h2>User Interview Questions</h2>
-          <p>I used the following questions to interview my users:</p>
-          <ol id="questions-list">
-            <li>Have you used this dispenser in the past?</li>
-            <li>Describe the purpose of this dispenser.</li>
-            <li>Describe how you use this dispenser.</li>
-            <li>What did you need utensils for today? What about typically?</li>
-            <li>on a scale of 1-5, with 1 being not at all intuitive and 5 being extremely intuitive, how intuitive would you rate this dispenser as being? Could you elaborate on [your answer]?</li>
-            <li>[if used before:] Can you think of a time when you struggled to use the dispenser? What didn't go as expected?</li>
-          </ol>
+      <hr/>
+    </div>
+    <div class="row" id="part-2">
+      <h1 class="display-3">Part 2: Visual Redesign</h1>
+      <p class="lead">
+        After identifying usability problems, I made low-fi and hi-fi prototypes for mobile,
+        tablet, and desktop versions of the website to address the concerns that I identified.
+      </p>
+      <h3>Low-Fi Prototyping</h3>
+      <p>Press the left/right arrows to see my different wireframes! Mouse over to stop auto-scrolling.</p>
+      <div id="low-fi-carousel" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#low-fi-carousel" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#low-fi-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#low-fi-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
-        <div id="interview-answers" class="two-col">
-          <h2>User Interview Insights</h2>
-          <p>
-            For each of the questions, here are the general conclusions I was
-            able to draw:
-          </p>
-          <ol>
-            <li>All interviewees had used the dispenser before.</li>
-            <li>
-              All interviewees essentially talked about the purpose being to
-              easily dispense plastic utensils.
-            </li>
-            <li>
-              All interviewees described the process of using the interface as a
-              simple pulling or yanking of the handle hanging out of the
-              dispenser.
-            </li>
-            <li>
-              Some interesting responses were:
-              <ul>
-                <li>one user reported that they needed a knife to cut a mango</li>
-                <li>users reported that they typically used utensils to accompany the food that they bought at the erc café, particularly muffins</li>
-                <ul>
-                  <li>one user noted not wanting to get their fingers dirty when working and eating pastries at the same time</li>
-                  <li>another user noted not always wanting certain parts of the sandwiches they bought</li>
-                </ul>
-                <li>
-                  one user was collecting utensils to bring back and use at home - they regularly resupplied a stock of disposable
-                  utensils to use in their dorm.
-              </li>
-              </ul>
-            </li>
-            <li>
-              The three scores given were 5, 4, and 5. Generally, there was agreement that the interface was pretty intuitive.
-              <ul>
-                <li>
-                  one user touched upon the idea of affordances (not explicitly) - mentioned that having the utensil handles hanging out
-                  like that lends itself to pulling on them
-                </li>
-                <li>
-                  another user said they preferred the style of dispenser where you press a lever or button, since it feels more
-                  interactive/natural to them. They mentioned straw dispensers as an example of such an interface.
-                </li>
-                <li>
-                    A user rated 4 instead of 5 because they said they couldn't conceptualize how the dispenser works, since it's not
-                    possible to see how the dispenser works. In other words, they couldn't form a good mental model of how the interface
-                    was designed.
-                </li>
-              </ul>
-            </li>
-            <li>
-              Most users said no to this question initially, but came up with incidents upon further prompting, indicating that although
-              such incidents are not frequent, they do happen.
-              <ul>
-                <li>
-                  Some users mentioned times when they wanted to acquire multiple/many utensils for a group activity/for friends and that they
-                  struggled to rapidly obtain multiple utensils of the same type
-                </li>
-                <li>
-                  one user mentioned having the interface jam because multiple utensils entered the slot at the same time. This made it
-                  significantly harder to use the interface because they had to pull really hard to get both utensils out at once
-                </li>
-                <li>
-                  another user mentioned that sometimes they miss the handle or don't pull hard enough, especially if they are in a hurry
-                  or are holding other things (i.e. takeout container)
-                </li>
-                <li>
-                  Lastly, one user mentioned using a similar device when there was high traffic and sometimes finding that there were not
-                  utensils of a given variety. They also mentioned learning that they could pull the little handle under each dispenser
-                  opening to force a new utensil to drop.
-                </li>
-              </ul>
-            </li>
-          </ol>
-        </div>
-        <div id="personas">
-          <h2>Personas</h2>
-          <p>I created the following personas based on the observations and interviews:</p>
-          <div id="empathy-maps" class="content">
-            <img src="./assets/clean-carmen.jpg" alt="empathy map for Clean Carmen" class="two-col">
-            <img src="./assets/hoarding-harry.jpg" alt="empathy map for Hoarding Harry" class="two-col">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="assets/low-fi/Laptop.png" class="d-block w-100" alt="low-fi wireframe prototype for laptop screens">
+          </div>
+          <div class="carousel-item">
+            <img src="assets/low-fi/Tablet.png" class="d-block w-100" alt="low-fi wireframe prototype for tablet screens">
+          </div>
+          <div class="carousel-item">
+            <img src="assets/low-fi/Phone.png" class="d-block w-100" alt="low-fi-wireframe prototype for phone screens">
           </div>
         </div>
-        <div id="storyboard">
-          <h2>Storyboard</h2>
-          <p>Finally, I created the following storyboard based off of Hoarding Harry's experience using the interface.</p>
-          <img src="./assets/storyboard.jpg" alt="storyboard for Hoarding Harry">
+        <button class="carousel-control-prev" type="button" data-bs-target="#low-fi-carousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#low-fi-carousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <h3>Hi-Fi Prototyping</h3>
+      <p>
+        Before starting, I made the follwing visual style guide to help me in the design process. Since my interface
+        is relatively simple, I didn't have that many components. Since the school's colors are blue and gold, I used
+        these for my theme colors as well!
+      </p>
+      <div class="row mb-4">
+        <img src="assets/hi-fi/Style Guide.png" alt="Figma style guide for visual components of redesigned website" class="col"/>
+      </div>
+      <p>Press the left/right arrows to see my different Figma prototypes! Mouse over to stop auto-scrolling.</p>
+      <div id="hi-fi-carousel" class="carousel carousel-dark slide mb-4" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#hi-fi-carousel" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#hi-fi-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#hi-fi-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="assets/hi-fi/Laptop.png" class="d-block w-100" alt="hi-fi Figma prototype for laptop screens">
+          </div>
+          <div class="carousel-item">
+            <img src="assets/hi-fi/Tablet.png" class="d-block w-100" alt="hi-fi Figma prototype for tablet screens">
+          </div>
+          <div class="carousel-item">
+            <img src="assets/hi-fi/Phone.png" class="d-block w-100" alt="hi-fi-Figma prototype for phone screens">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#hi-fi-carousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#hi-fi-carousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <hr/>
+    </div>
+    <div class="row" id="part-3">
+      <h1 class="display-3">Part 3: Responsive Redesign</h1>
+      <p class="lead col">
+        Finally, I used HTML and Bootstrap's CSS components library to create a responsively redesigned (static)
+        webpage based on my Figma prototypes.
+      </p>
+      <div class="col d-flex align-items-center justify-content-center">
+        <a class="btn" href="redesign.html" style="background-color:#651868; color:white">Click to go to my redesigned webpage!</a>
       </div>
     </div>
-  </body>
-
-</html>
+  </main>
+  <footer class="container d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <div class="col-md-6 mb-0 text-muted small">
+      <p>
+        This website was created using Bootstrap's CSS Components library
+      </p>
+    </div>
+  
+    <div class="col-md-4 d-flex justify-content-end">
+      <img src="assets/sloth-icon.png" alt="cartoon of sleeping sloth" id="sloth-icon"/>  
+    <div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"
+    integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
+</body>
